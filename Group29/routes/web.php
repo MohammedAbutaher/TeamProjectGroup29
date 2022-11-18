@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/', function () {
+    return view('mainpage');
+});
 
 //Routes::Products daatabase 
 Route::get('basket', 'App\Http\Controllers\ProductsController@list')->name('list');
@@ -24,3 +26,7 @@ Route::post('/basket', [App\Http\Controllers\ProductsController::class, 'store']
 
 //Route::Add from Products database to Image database  
 Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
