@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 /*
+the next line
+*/
+use Illuminate\Support\Facades\Auth;
+/*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -29,4 +33,5 @@ Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout']
 
 Auth::routes();
 
+//Route::view('home','home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

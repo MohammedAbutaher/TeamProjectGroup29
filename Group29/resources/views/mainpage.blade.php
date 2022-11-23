@@ -15,12 +15,6 @@
     <h1 id="title">Homepage</h1>
 </body>
 
-</html>
-
-
-
-
-
 
 
 @if (Route::has('login'))
@@ -36,3 +30,7 @@
     @endauth
 </div>
 @endif
+
+
+
+</html>
