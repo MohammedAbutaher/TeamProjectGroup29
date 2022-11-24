@@ -36,6 +36,8 @@ if(isset($_POST['submit']))
 ?>
 
 <html>
+@include('layouts/nav')
+<link href="{{ asset('css/app.css?v=').time()}}" rel="stylesheet" type="text/css">
 
 <h1>Cart function</h1>
 <form action="/checkout" method="get"> 
@@ -101,4 +103,11 @@ if(isset($_POST['submit']))
     @endforeach
 
 </table> 
+
+<br>
+<br>
+<br>
+<br>
+
+@include('layouts/footer')
 </html> 

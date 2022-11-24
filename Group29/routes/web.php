@@ -35,6 +35,10 @@ Auth::routes();
 
 //Route::view('home','home');
 
+// Route::get('login',function(){
+//     return view('login');
+// })->name('login');
+
 Route::view('products','products');
 
 Route::view('contact_us','contact_us');

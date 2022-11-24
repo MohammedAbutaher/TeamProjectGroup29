@@ -6,28 +6,13 @@
     <title>Index</title>
 
     <link href="{{ asset('css/app.css?v=').time()}}" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}">
 
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav">
-                <img src="img/logo-no-background.png" class="brand-logo" alt="">
-                <div class="nav-items">
-                    <ul class="links-container">
-                        <li class="link-item"><a href="{{('products')}}" class="link">Products</a></li>
-                        <li class="link-item"><a href="{{('contact_us')}}" class="link">Contact</a></li>
-                        <li class="link-item"><a href="{{('about_us')}}" class="link">About</a></li>
-                    </ul>
-                    <div><a class="iconpad" href="#"><img src="img/user.png" alt=""></a></div>
-                    <div><a class="iconpad" href="#"><img src="img/cart.png" alt=""></a></div>
-                </div>
-            </div>
-
-        </nav>
-
+    @include('layouts/nav')
     </header>
 
     <body>
@@ -76,46 +61,13 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>
-    </body>
-
-    <footer>
-        <div id="footer_flex">
-            <div>
-                <!--<link to different pages >-->
-                <h4>Pages</h4>
-                <blockquote>
-                    <a href="{{('products')}}" class="footer_pages">Products</a>
-                    <br>
-                    <a href="{{('contact_us')}}" class="footer_pages">Contact</a>
-                    <br>
-                    <a href="{{('about_us')}}" class="footer_pages">About</a>
-                </blockquote>
-            </div>
-            <div>
-                <!--<links to my difgferent social media >-->
-                <h4>Socials</h4>
-
-                <a href="https://twitter.com/?lang=en" target="_blank" class="twitter">
-                    <img src="img/twitter_small.png" alt="" class="footer_images">
-                </a>
-
-
-                <a href="https://github.com/" target="_blank" class="twitter">
-                    <img src="img/github-sign_small.png" alt="" class="footer_images">
-                </a>
-
-
-                <a href="https://uk.linkedin.com/" target="_blank" class="twitter">
-                    <img src="img/linkedin_small.png" alt="" class="footer_images">
-                </a>
+                </div>
             </div>
         </div>
-        <!--< creator of the page>-->
-        <p class="footer_line1"><a href="" class="autoemail">Recipes2Go</a>
-            &copy; 2022</p>
-    </footer>
+    </body>
+
+    @include('layouts/footer')
 </body>
 
 </html>
