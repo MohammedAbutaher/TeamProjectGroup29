@@ -51,3 +51,330 @@ h1 {
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: rgba(0, 0, 0, 0.65);
 }
+
+
+/* Kess CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    z-index: 9;
+}
+
+.nav{
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo{
+    height: 35px;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.iconpad{
+    padding-left: 10px;
+}
+
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+}
+
+.link{
+    text-transform: capitalize;
+    padding: 0 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #383838;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.link:hover{
+    opacity: 1;
+}
+
+.search-box::placeholder{
+    color: #a9a9a9;
+}
+
+.footer_images{
+    width: 40px;
+}
+
+#footer_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.footer_pages,.autoemail,h4{
+    color: rgb(255, 255, 255);
+    font-size: small;
+}
+
+footer{
+    background-color: #31c48d;
+}
+.footer_line1{
+text-align: center;
+color: white;
+font-size: x-small;
+}
+
+#footer_contact_me{
+    text-align: center;
+    margin-top: auto;
+}
+
+.hero-section{
+    width: 100%;
+    height: calc(100vh - 520px);
+    background-image: url('../img/pizza-gfdaa03254_1920.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .logo{
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+.hero-section .sub-heading{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+#sign-up{
+    height: 720px;
+    width: 400px;
+    background-color: #a1ff8a;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=date] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+.product-list{
+  background-color:#1dc970;
+
+}
+.product-list .card{
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0px 10px 5px #b2bec3;
+  text-align: center;
+  flex-grow: 1;
+}
+.card .title{
+  font-size: 18px;
+  font-weight: bold;
+}
+.card .text{
+  text-align: left;
+}
+.buy-button {
+  background-color: #b2bec3;
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.product-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+}
+
+.recipeimg {
+  width: 350px;
+  height: 200px;
+  text-align:center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #1dc970;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 17%;
+  text-align: center;
+}
+
+.topnav a:hover {
+  background-color: rgb(23, 157, 13);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #055015;
+  color: rgb(107, 186, 28);
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.info{
+  color: blue;
+  font-size: 80px;
+}
+
+.header{
+color:black
+text-align center;
+padding: 75px;
+}
+.header h1{
+text-align: center;
+font-family: monospace;
+font-size: 70px;
+color: #085d31;
+position: relative;
+
+  text-shadow:
+  -2px -2px 0 rgb(247, 226, 5),
+  2px -2px 0 rgb(158, 199, 26),
+  -2px 2px 0 rgb(189, 252, 3),
+  2px 2px 0 rgb(20, 239, 177); 
+}
+.header p {
+text-align: center;
+font-family: Arial;
+font-size: 20px;
+font-style: bold;
+background-color: aquamarine;
+padding: 20px;
+ box-shadow:
+ -2px -2px 0 rgb(247, 226, 5),
+ 2px -2px 0 rgb(158, 199, 26),
+ -2px 2px 0 rgb(189, 252, 3),
+ 2px 2px 0 rgb(20, 239, 177); ;
+}
+
+
+.information{
+text-align: center;
+
+}
+.information h1{
+font-size: 70px;
+font-family:sans-serif;
+color: #0b8225;
+background: lightgreen;
+text-shadow:
+-2px -2px 0 rgb(247, 226, 5),
+2px -2px 0 rgb(158, 199, 26),
+-2px 2px 0 rgb(189, 252, 3),
+2px 2px 0 rgb(20, 239, 177); 
+}
+
+
+.information h2{
+color: #06ae2a;
+font-size: 45px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background: lightgreen;
+text-shadow:
+-1px -1px 0 rgb(167, 159, 81),
+1px -1px 0 rgb(158, 199, 26),
+-1px 1px 0 rgb(189, 252, 3),
+1px 1px 0 rgb(20, 239, 177); 
+}
+
+.information p{
+color: #06ae2a;
+font-size: 20px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background: lightyellow;
+}
+
+
+
+.mission h1{
+color: #06ae2a;
+font-size: 45px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background: lightgreen;
+}
+.mission p{
+color: #06ae2a;
+font-size: 20px;
+background: lightyellow;
+}
+.mission h2{
+font-size: 25px;
+font-family: monospace;
+background: lightgreen;
+
+}
+
+.mission h3{
+color: #06ae2a;
+font-size: 45px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background: lightgreen;
+}
+

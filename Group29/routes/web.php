@@ -34,4 +34,11 @@ Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout']
 Auth::routes();
 
 //Route::view('home','home');
+
+Route::view('products','products');
+
+Route::view('contact_us','contact_us');
+
+Route::view('about_us','about_us');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

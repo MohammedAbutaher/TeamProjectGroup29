@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/app.css?v=').time()}}" rel="stylesheet" type="text/css">
-    <title>Homepage</title>
-</head>
+    <meta charset="UTF-8" />
+    <title>Index</title>
 
+    <link href="{{ asset('css/app.css?v=').time()}}" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+</head>
 
 <body>
     <header>
@@ -26,61 +26,62 @@
                 </div>
             </div>
 
-            @if (Route::has('login'))
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                @auth
-                <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                @endif
-                @endauth
-            </div>
-            @endif
-
         </nav>
 
     </header>
-    <div class="hero-section">
-        <div class="content">
-            <img src="img/logo-no-background.png" class="logo" alt="">
-            <p class="sub-heading">Fresh Food Delivered To Your Door</p>
-        </div>
-    </div>
-    <div class="textbox">
-        <h1>Recipe2Go</h1>
-        <p>Welcome to our website Recipe2Go you may be asking your self
-            what is this website well let me tell you this website offers customers
-            to buy recipe delivery boxes
-            of pre-packaged meals to cook at home with the ingredients listed out.</p>
-    </div>
+
+    <!--Mo-Contact-Form-->
+
+    <form id="sign-up" onsubmit="return validateForm()">
+
+
+        <td> Full Name* </td>
+        <input type="text" id="fname" value="">
+        <span id="blankMsg" style="color:red"> </span> <br>
+
+
+        <td> Last Name </td>
+        <input type="text" id="lname" value="">
+        <span id="charMsg" style="color:red"> </span> <br>
+
+        <br>
+
+        <td>Pick Date</td>
+        <input type="date" id="Apdate">
+        <br>
+
+
+        <label for="con">Pick How to be Contacted</label>
+
+        <br>
+        <input type="radio" id="rdText" name="fav_language" value="text">
+        <label for="text">TEXT</label><br>
+        <input type="radio" id="rdEmail" name="fav_language" value="text1">
+        <label for="Email">Email</label><br>
+        <br>
+        <td> Enter Phone Number (UK ONLY) </td>
+        <input type="tel" id="PhoneNumber" value="">
+        <br>
 
 
 
-    <br>
-    <h2>Why You Should Stay</h2>
 
-    <p> Recipe2Go offers customers a wide variety of meals with the ingredients and the recipe, we offer the freshes
-        ingredients from the market that will be used by you the customers making
-        the experince much more enjoyable.
-    </p>
-    <br>
-    <h2>What We Promise!</h2>
-    <p>We from Recipe2Go here by promise to always keep our ingredients as fresh as possible! </p>
-    <br>
-    <h2>The Future Of Recipe2Go</h2>
-    <p>You may be asking what will be the future of Recipe2Go, well let
-        me tell you once we have branched out to a wide audience
-        we plan to add even more meals better suited for people needs
-        this means people with health concerns will not be ignored.
-    </p>
-    <br>
-    <h2>Why Not Have A Browse</h2>
-    <p>If your still here why not have a look at our products click <a href="./company_products.html">"HERE"</a> to
-        find out more. </p>
-    <br>
+        <td> Enter Email* </td>
+        <input type="text" id="email" value="">
+        <span id="message1" style="color:red"> </span> <br>
+
+
+        <td> Confirm Email* </td>
+        <input type="text" id="email2" value="">
+        <span id="message2" style="color:red"> </span> <br>
+
+
+        <input type="submit" value="Submit" onclick="return confirm('Are You Sure That You Would Like to Send These Details To  210172232@aston.ac.uk');">
+
+
+        <button type="reset" value="Reset">Reset</button>
+        <a href="https://github.com/login%22%3E<img id=" Github" src="./Images/Github.jpg" alt="Github"></a>
+    </form>
 
     <footer>
         <div id="footer_flex">
@@ -119,11 +120,5 @@
             &copy; 2022</p>
     </footer>
 </body>
-
-
-
-
-
-
 
 </html>
