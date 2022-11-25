@@ -8,7 +8,7 @@
         <div class="nav-items">
             <ul class="links-container">
                 <li class="link-item"><a href="{{('products')}}" class="link">Products</a></li>
-                <li class="link-item"><a href="{{('contact_us')}}" class="link">Contact</a></li>
+                <li class="link-item"><a href="{{('contact_us')}}" class="link">Contact Us</a></li>
                 <li class="link-item"><a href="{{('about_us')}}" class="link">About</a></li>
             </ul>
             <div><a class="iconpad" href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><img src="{{asset('images/user.png')}}" alt=""></a></div>

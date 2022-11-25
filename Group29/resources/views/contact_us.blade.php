@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body id="contact_us_back_image">
     <header>
         @include('layouts/nav')
 
@@ -69,7 +69,7 @@
             <span id="message2" style="color:red"> </span> <br>
 
 
-            <input id="contact_button_location" class="logbtn" type="submit" value="Submit" onclick="return confirm('Are You Sure That You Would Like to Send These Details To  210172232@aston.ac.uk');">
+            <input id="contact_button_location" class="logbtn" type="submit" value="Submit" onclick="return confirm('Are You Sure That You Would Like to Send These Details To Recipes 2 Go?');">
 
 
             <!-- <button type="reset" value="Reset">Reset</button>

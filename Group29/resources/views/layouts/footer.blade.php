@@ -7,7 +7,7 @@
             <blockquote>
                 <a href="{{('products')}}" class="footer_pages">Products</a>
                 <br>
-                <a href="{{('contact_us')}}" class="footer_pages">Contact</a>
+                <a href="{{('contact_us')}}" class="footer_pages">Contact Us</a>
                 <br>
                 <a href="{{('about_us')}}" class="footer_pages">About</a>
             </blockquote>
