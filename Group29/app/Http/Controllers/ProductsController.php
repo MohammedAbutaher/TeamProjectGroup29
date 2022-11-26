@@ -7,11 +7,13 @@ use App\Models\Products;
 
 class ProductsController extends Controller
 {
+    //Controller for the database which will hold the products
     //Display
     public function show($id){
         $products = Products::find($id);
         return view('/basket', array('product' => $products));
     }
+    //Return
     public function list(){
         return view('/basket', array('products'=>Products::all()));
     }

@@ -5,25 +5,54 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Products;
 use App\Models\Orders;
+use App\Models\Cart;
 
 
-// Add to basket controller
+
 class OrdersController extends Controller
 {
+
+    //This controlls the ordres database, to finilze the orders
+   
+
     public $message = ''; 
     //
-    public function checkout() 
+    public function order(REQUEST $request) 
     {
-        $cart = Orders::get();   // 'user_id', auth()->id()->get()
-        foreach($cart as $cartProduct) 
-        {
-            $product == Product::find(Products::find($cartProduct->id)); 
-            if (!$product || $product->quainty < $cartProduct->quainty) {
-                $this->message = $cartProduct->product->name. 'is currently out of stock'; 
+        // creation
+        $products = Cart::findOrFail($request->input( key: 'order'));  //find or fail 
+        foreach($products as $product) {
+            Orders::create([
+                        'productName'=>$products->productName, 
+                        'img_dir'=>$products->img_dir, 
+                        'quantity'=>$products->quantity, 
+                        'productPrice'=>$products->productPrice, 
+                        'description'=>$products->Description,         
+                   ]); 
             }
-
+    // delete cart 
+            //dd($products);
+            $products->truncate();
+                   
+            return redirect()->back();
         }
-
-        //dd($products);
-    }
 }
+
+
+    // public function order(REQUEST $request) 
+    // {
+    //     // creation
+    //     $product = Cart::find($request->input( key: 'order'));  //find or fail                
+    //         Orders::create([
+    //                     'productName'=>$products->productName, 
+    //                     'img_dir'=>$products->img_dir, 
+    //                     'quantity'=>$products->quantity, 
+    //                     'productPrice'=>$products->productPrice, 
+    //                     'description'=>$products->Description,         
+    //                ]); 
+    // // delete cart database
+    //         $products->truncate();
+    //         
+    //         return redirect()->back();
+    //     }
+    // }
