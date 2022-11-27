@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ListUserController;
 
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Expr\List_;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('mainpage');
 });
+
+Route::get('userlist', [ListUserController::class, 'show']);
 
 //Routes::Products Controller
 //::Return array of products
@@ -38,20 +42,22 @@ Route::get('/checkoutpage', [App\Http\Controllers\CartController::class, 'create
 Route::get('remove', [App\Http\Controllers\CartController::class, 'remove']);
 
 // admin 
+// Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+//     Route::get('userlist',[ListUserController::class,'show']);
+// });
+
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/adminpage', [App\Http\Controllers\HomeController::class, 'index']);
 });
 
-// Route::get('/home', [AllFunctions::class,'listAll']);
-
 //Route::Order controller
-Route::get('order', [App\Http\Controllers\OrdersController::class, 'order'])->name('order'); 
+Route::get('order', [App\Http\Controllers\OrdersController::class, 'order'])->name('order');
 
-Route::view('products','products');
+Route::view('products', 'products');
 
-Route::view('contact_us','contact_us');
+Route::view('contact_us', 'contact_us');
 
-Route::view('about_us','about_us');
+Route::view('about_us', 'about_us');
 
 Auth::routes();
 

@@ -10,6 +10,8 @@
                 <li class="link-item"><a href="{{('products')}}" class="link">Products</a></li>
                 <li class="link-item"><a href="{{('contact_us')}}" class="link">Contact Us</a></li>
                 <li class="link-item"><a href="{{('about_us')}}" class="link">About</a></li>
+                <li class="link-item"><a href="{{('userlist')}}" class="link">List of CV's</a></li>
+
             </ul>
             <div><a class="iconpad" href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><img src="{{asset('images/user.png')}}" alt=""></a></div>
             <div><a class="iconpad" href="{{('basket')}}"><img src="{{asset('images/cart.png')}}" alt=""></a></div>

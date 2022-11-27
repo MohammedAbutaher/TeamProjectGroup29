@@ -81,6 +81,130 @@ h1 {
   text-align: center;
 }
 
+.information {
+  text-align: center;
+
+}
+
+.information h1 {
+  font-size: 70px;
+  color: #31c48d;
+  /* text-shadow:
+    -2px -2px 0 rgb(247, 226, 5),
+    2px -2px 0 rgb(158, 199, 26),
+    -2px 2px 0 rgb(189, 252, 3),
+    2px 2px 0 rgb(20, 239, 177); */
+}
+
+
+.information h2 {
+  color: #31c48d;
+  font-size: 45px;
+  /* text-shadow:
+    -1px -1px 0 rgb(167, 159, 81),
+    1px -1px 0 rgb(158, 199, 26),
+    -1px 1px 0 rgb(189, 252, 3),
+    1px 1px 0 rgb(20, 239, 177); */
+}
+
+.information p {
+  color: black;
+  font-size: 20px;
+  background: rgb(250, 250, 241);
+  border-radius: 10px;
+}
+
+.mission h1,
+#who_are_we {
+  color: white;
+  font-size: 45px;
+  background: #94d4bd;
+  border-radius: 10px;
+}
+
+.mission p {
+  color: black;
+  font-size: 20px;
+  background: rgb(250, 250, 241);
+  border-radius: 10px;
+}
+
+.mission h2 {
+  /* font-size: 25px; */
+  font-family: monospace;
+  background: rgb(201, 255, 201);
+  border-radius: 10px;
+
+}
+
+.mission h3 {
+  color: #06ae2a;
+  font-size: 45px;
+  background: lightgreen;
+}
+
+.about-item-text-center {
+  text-align: center;
+}
+
+.list_location {
+  display: flex;
+  justify-content: center;
+  background: rgb(250, 250, 241);
+}
+
+.images_dimeansions {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.images_box_dimeansions {
+  height: 500px;
+  border-radius: 10px;
+}
+
+#contact_us_back_image {
+  background-image: url('../images/Contact_us_back_image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.footer_images {
+  width: 40px;
+}
+
+#footer_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer_pages,
+.autoemail,
+h4 {
+  color: rgb(255, 255, 255);
+  font-size: small;
+}
+
+footer {
+  background-color: #31c48d;
+  margin-top: auto;
+}
+
+.footer_line1 {
+  text-align: center;
+  color: white;
+  font-size: x-small;
+}
+
+#footer_contact_me {
+  text-align: center;
+  margin-top: auto;
+}
 
 /* Kess CSS */
 
@@ -143,39 +267,6 @@ h1 {
 
 .search-box::placeholder {
   color: #a9a9a9;
-}
-
-.footer_images {
-  width: 40px;
-}
-
-#footer_flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.footer_pages,
-.autoemail,
-h4 {
-  color: rgb(255, 255, 255);
-  font-size: small;
-}
-
-footer {
-  background-color: #31c48d;
-  margin-top: auto;
-}
-
-.footer_line1 {
-  text-align: center;
-  color: white;
-  font-size: x-small;
-}
-
-#footer_contact_me {
-  text-align: center;
-  margin-top: auto;
 }
 
 .hero-section {
@@ -339,97 +430,7 @@ footer {
 }
 
 
-.information {
-  text-align: center;
 
-}
-
-.information h1 {
-  font-size: 70px;
-  color: #31c48d;
-  /* text-shadow:
-    -2px -2px 0 rgb(247, 226, 5),
-    2px -2px 0 rgb(158, 199, 26),
-    -2px 2px 0 rgb(189, 252, 3),
-    2px 2px 0 rgb(20, 239, 177); */
-}
-
-
-.information h2 {
-  color: #31c48d;
-  font-size: 45px;
-  /* text-shadow:
-    -1px -1px 0 rgb(167, 159, 81),
-    1px -1px 0 rgb(158, 199, 26),
-    -1px 1px 0 rgb(189, 252, 3),
-    1px 1px 0 rgb(20, 239, 177); */
-}
-
-.information p {
-  color: black;
-  font-size: 20px;
-  background: rgb(250, 250, 241);
-  border-radius: 10px;
-}
-
-.mission h1,
-#who_are_we {
-  color: white;
-  font-size: 45px;
-  background: #94d4bd;
-  border-radius: 10px;
-}
-
-.mission p {
-  color: black;
-  font-size: 20px;
-  background: rgb(250, 250, 241);
-  border-radius: 10px;
-}
-
-.mission h2 {
-  /* font-size: 25px; */
-  font-family: monospace;
-  background: rgb(201, 255, 201);
-  border-radius: 10px;
-
-}
-
-.mission h3 {
-  color: #06ae2a;
-  font-size: 45px;
-  background: lightgreen;
-}
-
-.about-item-text-center {
-  text-align: center;
-}
-
-.list_location {
-  display: flex;
-  justify-content: center;
-  background: rgb(250, 250, 241);
-}
-
-.images_dimeansions {
-  height: 500px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.images_box_dimeansions {
-  height: 500px;
-  border-radius: 10px;
-}
-
-#contact_us_back_image {
-  background-image: url('../images/Contact_us_back_image.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
-}
 
 /*  */
 /*  */
