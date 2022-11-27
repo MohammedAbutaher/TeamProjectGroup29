@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,13 +39,19 @@ Route::get('remove', [App\Http\Controllers\CartController::class, 'remove']);
 
 // admin 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
-    //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/adminpage', [App\Http\Controllers\HomeController::class, 'index']);
 });
+
+// Route::get('/home', [AllFunctions::class,'listAll']);
 
 //Route::Order controller
 Route::get('order', [App\Http\Controllers\OrdersController::class, 'order'])->name('order'); 
 
+Route::view('products','products');
 
+Route::view('contact_us','contact_us');
+
+Route::view('about_us','about_us');
 
 Auth::routes();
 
