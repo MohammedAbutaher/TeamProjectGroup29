@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,18 +16,22 @@
 
     <!-- Scripts -->
     <link href="{{ asset('css/app.css?v=').time()}}" rel="stylesheet" type="text/css">
+
+    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+
 <body>
+    @include('layouts/nav')
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                </a> -->
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -39,15 +44,18 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+
+                                <!-- <li class="nav-item">
+                                    add {{ __('Login') }} in the next line before </a> 
+                                    <a class="nav-link" href="{{ route('login') }}"></a>
+                                </li> -->
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                                <!-- <li class="nav-item">
+                                     Add  {{ __('Register') }} in the next line before </a>
+                                    <a class="nav-link" href="{{ route('register') }}"></a>
+                                </li> -->
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -77,5 +85,8 @@
             @yield('content')
         </main>
     </div>
+    @include('layouts/footer')
 </body>
+
 </html>
+

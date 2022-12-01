@@ -17,15 +17,6 @@ if(isset($_POST['submit']))
     }
 }
 
-
-
-/// checkout</button>
-///https://www.youtube.com/watch?v=LuxFql2CDyg
-
-
-
-
-
 if(isset($_POST['submit']))
 { 
     $file = $_FILES['file'];
@@ -38,7 +29,7 @@ if(isset($_POST['submit']))
 <html>
 
 <h1>Cart function</h1>
-<form action="/checkout" method="get"> 
+<form action="checkoutpage/" method="get"> 
     <button class="btn btn-pirmary" type="submit" href="/puplic/order">Checkout</button>
 </form>
 
@@ -85,20 +76,29 @@ if(isset($_POST['submit']))
         <th>quainty</th>
         <th>productPrice</th>
         <th>description</th>
-  </tr>
-    @foreach ($photos as $photo)
+
+  @foreach ($photos as $photo)
     <tr>
         <td>{{$photo->name}}</td>    
-        <td><img src="{{asset('storage/images/'. $photo->image)}}"></td>    <!-- don't touch      -->
+        <td><img src="{{ url('storage/images/'.$photo->image) }}" alt="" title="" /></td> <!-- don't touch      -->
         <td>{{$photo->size}}</td>
-        <td>{{$photo->quainty}}</td>  
+         <td> 
+<form action="basket" method="post" enctype="multipart/form-data">
+     <br><input type="number" name="editQuainty" value="{{$photo->quantity}}"><br><br></span>
+</form>
+    <!--  -->
+
+     </td>     
         <td>{{$photo->productPrice}}</td>    
         <td>{{$photo->description}}</td> 
         <form action="checkout" method="get">
+            @csrf 
+            <input type="hidden" name="product_id" value="{{ $photo->id}}">
             <td><button class="btn btn-primary" type="submit" href="/public/checkout">Add to Cart</button></td>
         </form>
     </tr>
     @endforeach
 
+    
 </table> 
 </html> 

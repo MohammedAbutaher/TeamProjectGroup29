@@ -5,7 +5,8 @@
     <h1> {{ __('Login') }}</h1>
 </div>
 
-<div class="container">
+
+<div class="container_form">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -63,7 +64,9 @@
                                         <br>
                                         @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
+
+                                            <!-- {{ __('Forgot Your Password?') }} -->
+
                                         </a>
                                         @endif
                                     </div>
