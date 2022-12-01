@@ -13,9 +13,16 @@
 
 <body>
     <header>
+<<<<<<< HEAD
         @include('layouts/nav')
 
     </header>
+=======
+
+        @include('layouts/nav')
+    </header>
+    
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
     <div class="hero-section">
         <div class="content">
             <img src="{{asset('images/logo-no-background.png')}}" class="logo" alt="">
@@ -33,6 +40,10 @@
             of pre-packaged meals to cook at home with the ingredients listed out.</p>
     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
     <br>
     <div class="style_box">
         <br>
@@ -88,5 +99,8 @@
     @include('layouts/footer')
 </body>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
 </html>

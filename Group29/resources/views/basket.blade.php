@@ -36,7 +36,11 @@ if(isset($_POST['submit']))
 </header>
 
 <h1>Cart function</h1>
+<<<<<<< HEAD
 <form action="checkoutpage/" method="get">
+=======
+<form action="checkoutpage/" method="get"> 
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
     <button class="btn btn-pirmary" type="submit" href="/puplic/order">Checkout</button>
 </form>
 
@@ -85,6 +89,7 @@ if(isset($_POST['submit']))
         <th>productPrice</th>
         <th>description</th>
 
+<<<<<<< HEAD
         @foreach ($photos as $photo)
     <tr>
         <td>{{$photo->name}}</td>
@@ -101,15 +106,39 @@ if(isset($_POST['submit']))
         <td>{{$photo->description}}</td>
         <form action="checkout" method="get">
             @csrf
+=======
+  @foreach ($photos as $photo)
+    <tr>
+        <td>{{$photo->name}}</td>    
+        <td><img src="{{ url('storage/images/'.$photo->image) }}" alt="" title="" /></td> <!-- don't touch      -->
+        <td>{{$photo->size}}</td>
+         <td> 
+<form action="basket" method="post" enctype="multipart/form-data">
+     <br><input type="number" name="editQuainty" value="{{$photo->quantity}}"><br><br></span>
+</form>
+    <!--  -->
+
+     </td>     
+        <td>{{$photo->productPrice}}</td>    
+        <td>{{$photo->description}}</td> 
+        <form action="checkout" method="get">
+            @csrf 
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
             <input type="hidden" name="product_id" value="{{ $photo->id}}">
             <td><button class="btn btn-primary" type="submit" href="/public/checkout">Add to Cart</button></td>
         </form>
     </tr>
     @endforeach
 
+<<<<<<< HEAD
 
 </table>
 
 @include('layouts/footer')
 
 </html>
+=======
+    
+</table> 
+</html> 
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5

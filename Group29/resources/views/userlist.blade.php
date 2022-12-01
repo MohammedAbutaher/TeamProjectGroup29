@@ -15,19 +15,31 @@
 <body>
     <header>
         @include('layouts/nav')
+<<<<<<< HEAD
         
+=======
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
 
     </header>
 
     <h1>List of Users</h1>
 
 
+<<<<<<< HEAD
     <table class="users_CSS">
         <tr>
             <td id="first_row_table">ID</td>
             <td id="first_row_table">Name</td>
             <td id="first_row_table">Email</td>
             <td id="first_row_table">Registration Date</td>
+=======
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Registration Date</td>
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
 
         </tr>
         @foreach($users as $user)

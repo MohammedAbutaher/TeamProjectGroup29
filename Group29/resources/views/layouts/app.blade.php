@@ -16,6 +16,10 @@
 
     <!-- Scripts -->
     <link href="{{ asset('css/app.css?v=').time()}}" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
     <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -43,6 +47,10 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
                                 <!-- <li class="nav-item">
                                     add {{ __('Login') }} in the next line before </a> 
                                     <a class="nav-link" href="{{ route('login') }}"></a>
@@ -86,4 +94,9 @@
     @include('layouts/footer')
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5

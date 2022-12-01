@@ -12,6 +12,10 @@
 
 <body>
     <header>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
         @include('layouts/nav')
     </header>
 
@@ -91,6 +95,10 @@
     </div>
 
     @include('layouts/footer')
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6d356d270896ba541e04282679d1f52342e20e5
 </body>
 
 </html>
