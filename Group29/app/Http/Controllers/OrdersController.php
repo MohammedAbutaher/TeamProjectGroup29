@@ -17,42 +17,104 @@ class OrdersController extends Controller
 
     public $message = ''; 
     //
-    public function order(REQUEST $request) 
-    {
-        // creation
-        $products = Cart::findOrFail($request->input( key: 'order'));  //find or fail 
-        foreach($products as $product) {
-            Orders::create([
-                        'productName'=>$products->productName, 
-                        'img_dir'=>$products->img_dir, 
-                        'quantity'=>$products->quantity, 
-                        'productPrice'=>$products->productPrice, 
-                        'description'=>$products->Description,         
-                   ]); 
-            }
-    // delete cart 
-            //dd($products);
-            $products->truncate();
-                   
+ public function order(REQUEST $request) 
+{
+    $products = Cart::findOrFail($request->input( key: 'order'));  //find or fail 
+        $newOrder = new Orders();
+            $newOrder->productName = $products->productName; 
+            $newOrder->img_dir = $products->img_dir; 
+            $newOrder->quantity = $products->quantity; 
+            $newOrder->productPrice = $products->productPrice; 
+            $newOrder->ingredients = $products->ingredients; 
+            $newOrder->instructions = $products->instructions;
+            $newOrder->save();
+            // dd($newOrder);
+            $products->truncate();         
             return redirect()->back();
+
+    // // creation
+    // $products = Cart::all();  //find or fail 
+    //     $id = Cart::find($request->input( key: 'order')); 
+    //     $newOrder = new Orders();
+    //     $newOrder->productName = $products['productName']; 
+    //                 $newOrder->img_dir = $products['img_dir'];   
+    //                 $newOrder->quantity = $products['quantity']; 
+    //                 $newOrder->productPrice = $products['productPrice']; 
+    //                 $newOrder->ingredients = $products['ingredients']; 
+    //                 $newOrder->instructions = $products['instructions']; 
+    //     $newOrder->save();
+         
+    //         // delete cart 
+    //                 //dd($products);
+    //                 $products->truncate();         
+    //                 return redirect()->back();
+                
         }
-}
+    }
 
+// 1ST ATTEMPT
+// public function order(REQUEST $request) 
+// {
+//     // creation
+//     $products = Cart::findOrFail($request->input( key: 'order'));  //find or fail 
+//         Orders::create([
+//                     'productName'=>$product->productName, 
+//                     'img_dir'=>$product->img_dir, 
+//                     'quantity'=>$product->quantity, 
+//                     'productPrice'=>$product->productPrice, 
+//                     'ingredients'=>$product->ingredients, 
+//                     'instructions'=>$product->instructions,  
+//                ]); 
+// // delete cart 
+//         //dd($products);
+//         $products->truncate();         
+//         return redirect()->back();
+//     }
+// }
 
-    // public function order(REQUEST $request) 
-    // {
-    //     // creation
-    //     $product = Cart::find($request->input( key: 'order'));  //find or fail                
-    //         Orders::create([
-    //                     'productName'=>$products->productName, 
-    //                     'img_dir'=>$products->img_dir, 
-    //                     'quantity'=>$products->quantity, 
-    //                     'productPrice'=>$products->productPrice, 
-    //                     'description'=>$products->Description,         
-    //                ]); 
-    // // delete cart database
-    //         $products->truncate();
-    //         
-    //         return redirect()->back();
-    //     }
-    // }
+// 2ND
+// public function order(REQUEST $request) 
+// {
+//     // creation
+//     $products = Cart::findOrFail($request->input( key: 'order'))->toArray();  //find or fail 
+//     $newOrder = new Orders();
+//         $newOrder->productName = $products->productName; 
+//         $newOrder->img_dir = $products->img_dir; 
+//         $newOrder->quantity = $products->quantity; 
+//         $newOrder->productPrice = $products->productPrice; 
+//         $newOrder->ingredients = $products->ingredients; 
+//         $newOrder->instructions = $products->instructions;
+//         $newOrder->save();
+// // delete cart 
+//         //dd($products);
+//         $products->truncate();
+               
+//         return redirect()->back();
+//     }
+// }
+
+// 3RD 
+// public function order(REQUEST $request) 
+// {
+//     // creation
+//     $itartor = Cart::all(); 
+//     foreach ($itartor as $i) { 
+//         $products = Cart::find($request->input( key: 'order'))->toArray();  //find or fail 
+//         $id = Cart::find($request->input( key: 'order'));
+//         $newOrder = new Orders();
+//             $newOrder->productName = $products['productName']; 
+//             $newOrder->img_dir = $products['img_dir']; 
+//             $newOrder->quantity = $products['quantity']; 
+//             $newOrder->productPrice = $products['productPrice']; 
+//             $newOrder->ingredients = $products['ingredients']; 
+//             $newOrder->instructions = $products['instructions']; 
+//     }
+//     dd($products);
+//         $newOrder->save();
+//         $newOrder->save()->saveMany($products);
+//             // delete cart 
+//             //dd($products);
+//             $id->truncate();            
+//             return redirect()->back();
+//         }
+//     }

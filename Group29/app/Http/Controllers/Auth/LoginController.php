@@ -7,7 +7,6 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 
-
 class LoginController extends Controller
 {
     /*
@@ -28,7 +27,6 @@ class LoginController extends Controller
      *
      * @var string
      */
-
     // protected $redirectTo = RouteServiceProvider::HOME;
     public function authenticated() 
     {
@@ -41,4 +39,13 @@ class LoginController extends Controller
             return redirect('/home')->with('status', 'Welcome user'); // redirect(display) if user is not 
         }
     }
-
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+}

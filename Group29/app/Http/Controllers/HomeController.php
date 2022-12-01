@@ -4,8 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
 
 use App\Models\users;
+
+use Illuminate\Support\Facades\Auth;
+
+use App\Models\Cart;
+
+use App\Models\Products;
 
 
 class HomeController extends Controller
@@ -27,6 +34,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
-    }
+        if (Auth::user()->role == '1') {
+            $users = User::all();
+            return view('/userlist', compact('users'));
+        } else {
 
+            // $productsCart = Cart::all();
+            // return view('/checkoutpage', compact('productsCart'));
+            
+            $products = Products::all(); 
+            return view('/products', compact('products'));
+        }
+    }
+}
