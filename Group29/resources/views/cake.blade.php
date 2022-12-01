@@ -17,7 +17,7 @@
     <br>
     <br>
 
-    <img id="cake_size" src="{{ url('images/cake.jpg') }}" alt="">
+    <img id="cake_size" src="{{ url('images/Cake.jpg') }}" alt="">
 
     <!-- <img src="{{url('images/cake.png')}}"/> -->
 
