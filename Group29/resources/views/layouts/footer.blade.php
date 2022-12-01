@@ -5,7 +5,7 @@
             <br>
             <h4>Pages</h4>
             <blockquote>
-                <a href="{{('products')}}" class="footer_pages">Products</a>
+                <a href="{{('productsnotbtn')}}" class="footer_pages">Products</a>
                 <br>
                 <a href="{{('contact_us')}}" class="footer_pages">Contact Us</a>
                 <br>
