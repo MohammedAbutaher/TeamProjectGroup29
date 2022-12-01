@@ -13,7 +13,6 @@
 <body id="contact_us_back_image">
     <header>
         @include('layouts/nav')
-
     </header>
 
     <!--Mo-Contact-Form-->
@@ -77,6 +76,7 @@
         </form>
     </div>
     @include('layouts/footer')
+
 </body>
 
 </html>

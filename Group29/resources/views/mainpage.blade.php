@@ -13,9 +13,10 @@
 
 <body>
     <header>
-        @include('layouts/nav')
 
+        @include('layouts/nav')
     </header>
+    
     <div class="hero-section">
         <div class="content">
             <img src="{{asset('images/logo-no-background.png')}}" class="logo" alt="">
@@ -32,6 +33,7 @@
             to buy recipe delivery boxes
             of pre-packaged meals to cook at home with the ingredients listed out.</p>
     </div>
+
 
     <br>
     <div class="style_box">
@@ -87,6 +89,5 @@
 
     @include('layouts/footer')
 </body>
-
 
 </html>

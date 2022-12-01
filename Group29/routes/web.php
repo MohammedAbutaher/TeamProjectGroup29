@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Expr\List_;
 
 /*
+the next line
+*/
+use Illuminate\Support\Facades\Auth;
+/*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -21,7 +25,9 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
+
 Route::get('userlist', [ListUserController::class, 'show']);
+
 
 //Routes::Products Controller
 //::Return array of products
@@ -60,5 +66,6 @@ Route::view('contact_us', 'contact_us');
 Route::view('about_us', 'about_us');
 
 Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

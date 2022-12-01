@@ -12,6 +12,7 @@
 
 <body>
     <header>
+
         @include('layouts/nav')
     </header>
 
@@ -91,6 +92,7 @@
     </div>
 
     @include('layouts/footer')
+
 </body>
 
 </html>
