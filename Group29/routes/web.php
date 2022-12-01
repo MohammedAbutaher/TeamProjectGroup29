@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListUserController;
+
+use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Expr\List_;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +17,63 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('mainpage');
+});
 
-
-//Routes::Products daatabase 
-Route::get('basket', 'App\Http\Controllers\ProductsController@list')->name('list');
+Route::get('products', 'App\Http\Controllers\ProductsController@list')->name('list');
+//::Display product database 
 Route::get('show/{id}', 'App\Http\Controllers\ProductsController@show');
-//Routes::Image routes in products database 
+//::Create entry in product database 
+Route::get('/products', [App\Http\Controllers\ProductsController::class, 'createProducts']);
+Route::post('/products', [App\Http\Controllers\ProductsController::class, 'store']);
+
+Route::get('userlist', [ListUserController::class, 'show']);
+
+//Routes::Products Controller
+//::Return array of products
+Route::get('basket', 'App\Http\Controllers\ProductsController@list')->name('list');
+//::Display product database 
+Route::get('show/{id}', 'App\Http\Controllers\ProductsController@show');
+//::Create entry in product database 
 Route::get('/basket', [App\Http\Controllers\ProductsController::class, 'create']);
+//::Store a entry in product database
 Route::post('/basket', [App\Http\Controllers\ProductsController::class, 'store']);
 
-//Route::Add from Products database to Image database  
-Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
+//Route::Cart controller
+//::Add from Products database to cart database  
+Route::get('checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
+//::Display cart database
+Route::get('/checkoutpage', [App\Http\Controllers\CartController::class, 'create']);
+//::Remove from cart database
+Route::get('remove', [App\Http\Controllers\CartController::class, 'remove']);
+
+// admin 
+// Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+//     Route::get('userlist',[ListUserController::class,'show']);
+// });
+
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/adminpage', [App\Http\Controllers\HomeController::class, 'index']);
+});
+
+//Route::Order controller
+Route::get('order', [App\Http\Controllers\OrdersController::class, 'order'])->name('order');
+
+// Route::view('products', 'products');
+
+Route::get('/productsnotbtn', [App\Http\Controllers\ProductsController::class, 'productsNoButton']);
+
+// Route::view('productsnotbtn', 'productsnotbtn');
+
+Route::view('contact_us', 'contact_us');
+
+Route::view('about_us', 'about_us');
+
+Route::get('/cake', function () {
+    return view('/cake');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
